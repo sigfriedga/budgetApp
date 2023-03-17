@@ -4,8 +4,8 @@ const incomes = [
 ];
 
 const bills = [
-    new Bills('Alquiler', 450),
-    new Bills('Luz', 98)
+    new Bill('Alquiler', 450),
+    new Bill('Luz', 98)
 ];
 
 let loadApp = () => {
@@ -121,4 +121,23 @@ const deleteBill = (id) => {
     bills.splice(deleteIndex, 1);
     loadHero();
     loadBills();
+}
+
+let addData = () => {
+    let form = document.forms['form'];
+    let type = form['type'];
+    let description = form['description'];
+    let value = form['value'];
+
+    if (description.value !== '' && value.value !== ' ') {
+        if (type.value === 'income') {
+            incomes.push(new Income(description.value, Number(value.value))); /**Otra opcion es sustituir Number() por + */
+            loadHero();
+            loadIncomes();
+        } else if (type.value === 'bill') {
+            bills.push(new Bill(description.value, +value.value));
+            loadHero();
+            loadBills();
+        }
+    }
 }

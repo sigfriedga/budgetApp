@@ -32,7 +32,34 @@
         </div>
       </div>
     </div>
-
+    <!--Form-->
+    <form id="form" onsubmit="return false;">
+      <div class="add">
+        <div class="add_container">
+          <select class="add_type" id="type">
+            <option value="income" selected>+</option>
+            <option value="bill" selected>-</option>
+          </select>
+          <input
+            type="text"
+            class="add_description"
+            placeholder="Agregar Descripción"
+            id="description"
+          />
+          <input
+            type="number"
+            class="add_value"
+            placeholder="Valor"
+            id="value"
+            step="any"
+          />
+          <button class="add_btn" onclick="addData()">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </form>
+    <!--Incomes and Bills-->
     <div class="container clineUpStyles">
       <div class="income">
         <h2 class="income_title">Ingresos</h2>

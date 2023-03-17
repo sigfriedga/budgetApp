@@ -114,18 +114,18 @@ body {
 }
 
 
-.agregar {
+.add {
     padding: 14px;
     border-bottom: 1px solid #e7e7e7;
     background-color: #f7f7f7;
 }
 
-.agregar_contenedor {
+.add_container {
     margin: 0 auto;
     text-align: center;
 }
 
-.agregar_tipo {
+.add_type {
     width: 55px;
     border: 1px solid #e7e7e7;
     height: 44px;
@@ -137,8 +137,8 @@ body {
     transition: border 0.3s;
 }
 
-.agregar_descripcion,
-.agregar_valor {
+.add_description,
+.add_value {
     border: 1px solid #e7e7e7;
     background-color: #fff;
     color: inherit;
@@ -150,15 +150,15 @@ body {
     transition: border 0.3s;
 }
 
-.agregar_descripcion {
+.add_description {
     width: 400px;
 }
 
-.agregar_valor {
+.add_value {
     width: 100px;
 }
 
-.agregar_btn {
+.add_btn {
     font-size: 35px;
     background: none;
     border: none;
@@ -170,18 +170,18 @@ body {
     margin-left: 10px;
 }
 
-.agregar_btn:active {
+.add_btn:active {
     transform: translateY(2px);
 }
 
-.agregar_tipo:focus,
-.agregar_descripcion:focus,
-.agregar_valor:focus {
+.add_type:focus,
+.add_description:focus,
+.add_value:focus {
     outline: none;
     border: 1px solid #28B9B5;
 }
 
-.agregar_btn:focus {
+.add_btn:focus {
     outline: none;
 }
 
@@ -293,6 +293,6 @@ h2 {
     transform: translateX(-20px);
 }
 
-.element:hover .element_description {
+.element:hover .element_percent {
     transform: translateX(-20px);
 }

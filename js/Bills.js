@@ -1,9 +1,9 @@
-class Bills extends Data{
+class Bill extends Data{
     static billsCounter = 0;
 
     constructor(description, value){
         super(description, value);
-        this._id = ++Bills.billsCounter;
+        this._id = ++Bill.billsCounter;
     }
 
     get id(){

@@ -19,9 +19,17 @@ body {
     font-weight: 400;
 }
 
-.right { float: right; }
-.rojo { color: #FF5049 !important; }
-.rojofocus:focus { border: 1px solid #FF5049 !important; }
+.right {
+    float: right;
+}
+
+.red {
+    color: #FF5049 !important;
+}
+
+.redfocus:focus {
+    border: 1px solid #FF5049 !important;
+}
 
 .hero {
     height: 40vh;
@@ -34,7 +42,7 @@ body {
     color: #fff;
     background: url(fondo.png), #7b4397;
     background: url(fondo.png), -webkit-gradient(linear, right top, left top, from(#7b4397), to(#dc2430));
-    background: url(/Presupuesto/assets/img/fondo.png), linear-gradient(to left, #7b4397, #dc2430)
+    background: url(/Presupuesto/budgetApp/assets/img/fondo.png), linear-gradient(to left, #7b4397, #dc2430)
 }
 
 .budget {
@@ -46,7 +54,7 @@ body {
     color: #fff;
 }
 
-.budget_title{
+.budget_title {
     font-size: 20px;
     text-align: center;
     margin-bottom: 10px;
@@ -77,7 +85,7 @@ body {
 }
 
 .budget_income--text,
-.budget_bills--text {
+.budget_bill--text {
     float: left;
     font-size: 13px;
     color: #fff;
@@ -85,13 +93,13 @@ body {
 }
 
 .budget_income--value,
-.budget_bills--value {
+.budget_bill--value {
     letter-spacing: 1px;
     float: left;
 }
 
 .budget_income--percent,
-.budget_bills-percent {
+.budget_bill-percent {
     float: left;
     width: 34px;
     font-size: 11px;
@@ -99,7 +107,7 @@ body {
     margin-left: 10px;
 }
 
-.budget_bills-percent {
+.budget_bill-percent {
     background-color: rgba(255, 255, 255, 0.2);
     text-align: center;
     border-radius: 3px;
@@ -142,8 +150,13 @@ body {
     transition: border 0.3s;
 }
 
-.agregar_descripcion { width: 400px;}
-.agregar_valor { width: 100px;}
+.agregar_descripcion {
+    width: 400px;
+}
+
+.agregar_valor {
+    width: 100px;
+}
 
 .agregar_btn {
     font-size: 35px;
@@ -157,7 +170,9 @@ body {
     margin-left: 10px;
 }
 
-.agregar_btn:active { transform: translateY(2px); }
+.agregar_btn:active {
+    transform: translateY(2px);
+}
 
 .agregar_tipo:focus,
 .agregar_descripcion:focus,
@@ -166,20 +181,22 @@ body {
     border: 1px solid #28B9B5;
 }
 
-.agregar_btn:focus { outline: none; }
+.agregar_btn:focus {
+    outline: none;
+}
 
-.contenedor {
+.container {
     width: 860px;
     margin: 60px auto;
 }
 
-.ingreso {
+.income {
     float: left;
     width: 370px;
     margin-right: 70px;
 }
 
-.egreso {
+.bill {
     float: left;
     width: 370px;
 }
@@ -191,27 +208,37 @@ h2 {
     margin-bottom: 15px;
 }
 
-.ingreso_titulo { color: #28B9B5; }
-.egreso_titulo { color: #FF5049; }
+.income_title {
+    color: #28B9B5;
+}
 
-.elemento {
+.bill_title {
+    color: #FF5049;
+}
+
+.element {
     padding: 13px;
     border-bottom: 1px solid #e7e7e7;
 }
 
-.elemento:first-child { border-top: 1px solid #e7e7e7; }
-.elemento:nth-child(even) { background-color: #f7f7f7; }
+.element:first-child {
+    border-top: 1px solid #e7e7e7;
+}
 
-.elemento_descripcion {
+.element:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+.element_description {
     float: left;
 }
 
-.elemento_valor {
+.element_value {
     float: left;
     transition: transform 0.3s;
 }
 
-.elemento_porcentaje {
+.element_percent {
     float: left;
     margin-left: 20px;
     transition: transform 0.3s;
@@ -223,23 +250,23 @@ h2 {
     text-align: center;
 }
 
-.ingreso .elemento_valor,
-.ingreso .elemento_eliminar--btn {
+.income .element_value,
+.income .element_delete--btn {
     color: #28B9B5;
 }
 
-.egreso .elemento_valor,
-.egreso .elemento_porcentaje,
-.egreso .elemento_eliminar--btn {
+.bill .element_value,
+.bill .element_percent,
+.bill .element_delete--btn {
     color: #FF5049;
 }
 
 
-.elemento_eliminar {
+.element_delete {
     float: left;
 }
 
-.elemento_eliminar--btn {
+.element_delete--btn {
     font-size: 22px;
     background: none;
     border: none;
@@ -250,9 +277,22 @@ h2 {
     display: none;
 }
 
-.elemento_eliminar--btn:focus { outline: none; }
-.elemento_eliminar--btn:active { transform: translateY(2px); }
+.element_delete--btn:focus {
+    outline: none;
+}
 
-.elemento:hover .elemento_eliminar--btn { display: block; }
-.elemento:hover .elemento_valor { transform: translateX(-20px); }
-.elemento:hover .elemento_porcentaje { transform: translateX(-20px); }
+.element_delete--btn:active {
+    transform: translateY(2px);
+}
+
+.element:hover .element_delete--btn {
+    display: block;
+}
+
+.element:hover .element_value {
+    transform: translateX(-20px);
+}
+
+.element:hover .element_description {
+    transform: translateX(-20px);
+}
